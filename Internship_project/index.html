@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form id="form" action="#">
+            <h2>Sign Up</h2>
+            <p>
+                <input type="text" id="usrname" class="name" required placeholder="Username">
+            </p>
+            <p>
+                <input type="text" class="name" id="email" pattern="/^[^ ]+@[^ ]+\.[a-z]{2,3}$/" title="Must have @gmail.com" required placeholder="Email Address">
+            </p>
+            <p>
+                <input type="password" class="name" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required placeholder="Password">
+            </p>
+            <p>
+                <input type="text" class="name" placeholder="Confirm Password">
+            </p>
+            <p>
+                <!--<input type="submit" class="name" value="SUBMIT"> -->
+                <button class="button-64" role="button"><span class="text">SUBMIT</span></button>
+            </p>
+        </form>
+    </div>
+
+    <div id="mess">
+        <h3>Enter valid email address</h3>
+        <p id="mail" class="invalid">Ex- <b>abc34@gmail.com</b></p>
+    </div>
+    <div id="message">
+        <h3>Password must contain the following:</h3>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+      </div>
+    <script type="text/javascript" src="form.js"></script>
+</body>
+</html>
